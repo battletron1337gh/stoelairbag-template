@@ -21,7 +21,9 @@
                     <i class="fas fa-airbag logo-icon"></i>
                     <span>StoelAirbag</span>
                 </a>
-                <ul class="nav-menu">
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu" id="navMenu">
                     <li><a href="../index.html">Home</a></li>
                     <li class="dropdown">
                         <a href="#">Diensten <i class="fas fa-chevron-down"></i></a>
@@ -36,11 +38,43 @@
                     <li><a href="over-ons.html">Over Ons</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+
+                <!-- Mobile Menu -->
+                <div class="mobile-nav" id="mobileNav">
+                    <div class="mobile-nav-header">
+                        <a href="../index.html" class="logo">
+                            <i class="fas fa-airbag logo-icon"></i>
+                            <span>StoelAirbag</span>
+                        </a>
+                        <button class="mobile-nav-close" id="mobileNavClose">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <ul class="mobile-nav-menu">
+                        <li><a href="../index.html">Home</a></li>
+                        <li>
+                            <button class="mobile-dropdown-toggle" data-dropdown="services">
+                                Diensten <i class="fas fa-chevron-down"></i>
+                            </button>
+                            <ul class="mobile-dropdown-menu" id="services-dropdown">
+                                <li><a href="airbag-reparatie.html">Airbag Reparatie</a></li>
+                                <li><a href="stoelbekleding.html">Stoelbekleding</a></li>
+                                <li><a href="complete-renovatie.html">Complete Renovatie</a></li>
+                                <li><a href="ato-z-service.html">A-tot-Z Service</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="webshop.html" class="active">Webshop</a></li>
+                        <li><a href="over-ons.html">Over Ons</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+                
                 <div class="nav-actions">
                     <button class="lang-toggle" id="langToggle">
                         <span class="lang-nl active">NL</span> | <span class="lang-en">EN</span>
                     </button>
-                    <a href="webshop.html" class="cart-btn">
+                    <a href="#" class="cart-btn" id="cartBtn">
                         <i class="fas fa-shopping-cart"></i>
                         <span class="cart-count" id="cartCount">0</span>
                     </a>
@@ -110,7 +144,6 @@
                             <li><label><input type="checkbox"> <span>Opel</span></label></li>
                             <li><label><input type="checkbox"> <span>Peugeot</span></label></li>
                             <li><label><input type="checkbox"> <span>Renault</span></label></li>
-                            <li><label><input type="checkbox"> <span>Overige merken</span></label></li>
                         </ul>
                     </div>
                     <div class="filter-widget">
@@ -128,7 +161,7 @@
                 <!-- Product Grid -->
                 <div class="shop-content">
                     <div class="shop-header">
-                        <p class="shop-results">24 producten gevonden</p>
+                        <p class="shop-results">16 producten gevonden</p>
                         <div class="shop-sort">
                             <label for="sortSelect">Sorteren op:</label>
                             <select id="sortSelect">
@@ -140,234 +173,14 @@
                         </div>
                     </div>
 
-                    <div class="product-grid">
-                        <!-- Product 1 -->
-                        <div class="product-card" data-product-id="1">
-                            <div class="product-badge">Bestseller</div>
-                            <div class="product-image">
-                                <img src="../images/product-airbag-vw.jpg" alt="Airbag Module Volkswagen">
-                                <div class="product-overlay">
-                                    <button class="btn btn-quickview" onclick="quickView(1)">
-                                        <i class="fas fa-eye"></i> Snel bekijken
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <span class="product-category">Airbag Modules</span>
-                                <h3 class="product-title">Airbag Module Volkswagen Golf 6/7</h3>
-                                <div class="product-meta">
-                                    <span class="product-compatibility">
-                                        <i class="fas fa-check-circle"></i> Geschikt voor Golf 6 & 7
-                                    </span>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price-current">€149,95</span>
-                                </div>
-                                <button class="btn btn-primary btn-add-cart" onclick="addToCart(1, 'Airbag Module Volkswagen Golf 6/7', 149.95)">
-                                    <i class="fas fa-shopping-cart"></i> In winkelwagen
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 2 -->
-                        <div class="product-card" data-product-id="2">
-                            <div class="product-image">
-                                <img src="../images/product-hoes-universal.jpg" alt="Universele Stoelhoes">
-                                <div class="product-overlay">
-                                    <button class="btn btn-quickview" onclick="quickView(2)">
-                                        <i class="fas fa-eye"></i> Snel bekijken
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <span class="product-category">Stoelhoezen</span>
-                                <h3 class="product-title">Universele Stoelhoes - Zwart Leerlook</h3>
-                                <div class="product-meta">
-                                    <span class="product-compatibility">
-                                        <i class="fas fa-check-circle"></i> Universele pasvorm
-                                    </span>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price-current">€39,95</span>
-                                    <span class="price-old">€59,95</span>
-                                </div>
-                                <button class="btn btn-primary btn-add-cart" onclick="addToCart(2, 'Universele Stoelhoes - Zwart Leerlook', 39.95)">
-                                    <i class="fas fa-shopping-cart"></i> In winkelwagen
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 3 -->
-                        <div class="product-card" data-product-id="3">
-                            <div class="product-badge badge-new">Nieuw</div>
-                            <div class="product-image">
-                                <img src="../images/product-airbag-bmw.jpg" alt="Airbag BMW">
-                                <div class="product-overlay">
-                                    <button class="btn btn-quickview" onclick="quickView(3)">
-                                        <i class="fas fa-eye"></i> Snel bekijken
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <span class="product-category">Airbag Modules</span>
-                                <h3 class="product-title">Airbag Module BMW 3-Serie F30/F31</h3>
-                                <div class="product-meta">
-                                    <span class="product-compatibility">
-                                        <i class="fas fa-check-circle"></i> F30/F31/F34
-                                    </span>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price-current">€189,95</span>
-                                </div>
-                                <button class="btn btn-primary btn-add-cart" onclick="addToCart(3, 'Airbag Module BMW 3-Serie F30/F31', 189.95)">
-                                    <i class="fas fa-shopping-cart"></i> In winkelwagen
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 4 -->
-                        <div class="product-card" data-product-id="4">
-                            <div class="product-image">
-                                <img src="../images/product-repair-kit.jpg" alt="Reparatieset">
-                                <div class="product-overlay">
-                                    <button class="btn btn-quickview" onclick="quickView(4)">
-                                        <i class="fas fa-eye"></i> Snel bekijken
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <span class="product-category">Reparatiesets</span>
-                                <h3 class="product-title">Leder Reparatieset - Complete Set</h3>
-                                <div class="product-meta">
-                                    <span class="product-compatibility">
-                                        <i class="fas fa-check-circle"></i> Alle leder types
-                                    </span>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price-current">€24,95</span>
-                                </div>
-                                <button class="btn btn-primary btn-add-cart" onclick="addToCart(4, 'Leder Reparatieset - Complete Set', 24.95)">
-                                    <i class="fas fa-shopping-cart"></i> In winkelwagen
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 5 -->
-                        <div class="product-card" data-product-id="5">
-                            <div class="product-image">
-                                <img src="../images/product-airbag-audi.jpg" alt="Airbag Audi">
-                                <div class="product-overlay">
-                                    <button class="btn btn-quickview" onclick="quickView(5)">
-                                        <i class="fas fa-eye"></i> Snel bekijken
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <span class="product-category">Airbag Modules</span>
-                                <h3 class="product-title">Airbag Module Audi A3 8P/8V</h3>
-                                <div class="product-meta">
-                                    <span class="product-compatibility">
-                                        <i class="fas fa-check-circle"></i> A3 8P & 8V
-                                    </span>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price-current">€169,95</span>
-                                </div>
-                                <button class="btn btn-primary btn-add-cart" onclick="addToCart(5, 'Airbag Module Audi A3 8P/8V', 169.95)">
-                                    <i class="fas fa-shopping-cart"></i> In winkelwagen
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 6 -->
-                        <div class="product-card" data-product-id="6">
-                            <div class="product-badge">-20%</div>
-                            <div class="product-image">
-                                <img src="../images/product-foam.jpg" alt="Stoelschuim">
-                                <div class="product-overlay">
-                                    <button class="btn btn-quickview" onclick="quickView(6)">
-                                        <i class="fas fa-eye"></i> Snel bekijken
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <span class="product-category">Stoelonderdelen</span>
-                                <h3 class="product-title">Stoelschuim - Universeel 50x50cm</h3>
-                                <div class="product-meta">
-                                    <span class="product-compatibility">
-                                        <i class="fas fa-check-circle"></i> Op maat te snijden
-                                    </span>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price-current">€29,95</span>
-                                    <span class="price-old">€37,50</span>
-                                </div>
-                                <button class="btn btn-primary btn-add-cart" onclick="addToCart(6, 'Stoelschuim - Universeel 50x50cm', 29.95)">
-                                    <i class="fas fa-shopping-cart"></i> In winkelwagen
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 7 -->
-                        <div class="product-card" data-product-id="7">
-                            <div class="product-image">
-                                <img src="../images/product-hoes-bmw.jpg" alt="BMW Stoelhoes">
-                                <div class="product-overlay">
-                                    <button class="btn btn-quickview" onclick="quickView(7)">
-                                        <i class="fas fa-eye"></i> Snel bekijken
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <span class="product-category">Stoelhoezen</span>
-                                <h3 class="product-title">Maatwerk Stoelhoes BMW 3-Serie</h3>
-                                <div class="product-meta">
-                                    <span class="product-compatibility">
-                                        <i class="fas fa-check-circle"></i> E90/E91/E92/E93
-                                    </span>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price-current">€89,95</span>
-                                </div>
-                                <button class="btn btn-primary btn-add-cart" onclick="addToCart(7, 'Maatwerk Stoelhoes BMW 3-Serie', 89.95)">
-                                    <i class="fas fa-shopping-cart"></i> In winkelwagen
-                                </button>
-                            </div>
-                        </div>
-
-                        <!-- Product 8 -->
-                        <div class="product-card" data-product-id="8">
-                            <div class="product-image">
-                                <img src="../images/product-airbag-mercedes.jpg" alt="Airbag Mercedes">
-                                <div class="product-overlay">
-                                    <button class="btn btn-quickview" onclick="quickView(8)">
-                                        <i class="fas fa-eye"></i> Snel bekijken
-                                    </button>
-                                </div>
-                            </div>
-                            <div class="product-info">
-                                <span class="product-category">Airbag Modules</span>
-                                <h3 class="product-title">Airbag Module Mercedes C-Klasse W204</h3>
-                                <div class="product-meta">
-                                    <span class="product-compatibility">
-                                        <i class="fas fa-check-circle"></i> W204 / C204 / S204
-                                    </span>
-                                </div>
-                                <div class="product-price">
-                                    <span class="price-current">€199,95</span>
-                                </div>
-                                <button class="btn btn-primary btn-add-cart" onclick="addToCart(8, 'Airbag Module Mercedes C-Klasse W204', 199.95)">
-                                    <i class="fas fa-shopping-cart"></i> In winkelwagen
-                                </button>
-                            </div>
-                        </div>
+                    <div class="product-grid" id="productGrid">
+                        <!-- Products will be loaded by JavaScript -->
                     </div>
 
                     <!-- Pagination -->
                     <div class="pagination">
                         <a href="#" class="page-link active">1</a>
                         <a href="#" class="page-link">2</a>
-                        <a href="#" class="page-link">3</a>
                         <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
                     </div>
                 </div>
@@ -382,16 +195,19 @@
             <button class="cart-close" id="cartClose"><i class="fas fa-times"></i></button>
         </div>
         <div class="cart-items" id="cartItems">
-            <p class="cart-empty">Uw winkelwagen is leeg</p>
+            <div class="cart-empty">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Uw winkelwagen is leeg</p>
+            </div>
         </div>
         <div class="cart-footer">
             <div class="cart-total">
                 <span>Totaal:</span>
                 <span class="cart-total-price" id="cartTotal">€0,00</span>
             </div>
-            <a href="#" class="btn btn-primary btn-large btn-checkout">
+            <button class="btn btn-primary btn-large btn-checkout" id="checkoutBtn">
                 <i class="fas fa-lock"></i> Afrekenen
-            </a>
+            </button>
             <p class="cart-note">Verzendkosten worden berekend bij afrekenen</p>
         </div>
     </div>
@@ -473,6 +289,238 @@
     </a>
 
     <script src="../js/main.js"></script>
+    <script>
+        // Product Data - 16 Products
+        const products = [
+            {
+                id: 1,
+                name: "Airbag Module Volkswagen Golf 6/7",
+                price: 149.95,
+                oldPrice: null,
+                category: "Airbag Modules",
+                badge: "Bestseller",
+                image: "../images/product-airbag-vw.jpg",
+                compatibility: "Geschikt voor Golf 6 & 7",
+                description: "Originele kwaliteit airbag module geschikt voor Volkswagen Golf 6 en 7. Plug & play installatie."
+            },
+            {
+                id: 2,
+                name: "Universele Stoelhoes - Zwart Leerlook",
+                price: 39.95,
+                oldPrice: 59.95,
+                category: "Stoelhoezen",
+                badge: "-33%",
+                image: "../images/product-hoes-universal.jpg",
+                compatibility: "Universele pasvorm",
+                description: "Hoogwaardige universele stoelhoes in zwart lederlook. Waterafstotend en slijtvast."
+            },
+            {
+                id: 3,
+                name: "Airbag Module BMW 3-Serie F30/F31",
+                price: 189.95,
+                oldPrice: null,
+                category: "Airbag Modules",
+                badge: "Nieuw",
+                image: "../images/product-airbag-bmw.jpg",
+                compatibility: "F30/F31/F34",
+                description: "Professionele airbag module voor BMW 3-Serie F30, F31 en F34 modellen."
+            },
+            {
+                id: 4,
+                name: "Leder Reparatieset - Complete Set",
+                price: 24.95,
+                oldPrice: null,
+                category: "Reparatiesets",
+                badge: null,
+                image: "../images/product-repair-kit.jpg",
+                compatibility: "Alle leder types",
+                description: "Complete leder reparatieset met kleurmengsels, lijm en gereedschap."
+            },
+            {
+                id: 5,
+                name: "Airbag Module Audi A3 8P/8V",
+                price: 169.95,
+                oldPrice: null,
+                category: "Airbag Modules",
+                badge: null,
+                image: "../images/product-airbag-audi.jpg",
+                compatibility: "A3 8P & 8V",
+                description: "Airbag module geschikt voor Audi A3 8P en 8V generaties."
+            },
+            {
+                id: 6,
+                name: "Stoelschuim - Universeel 50x50cm",
+                price: 29.95,
+                oldPrice: 37.50,
+                category: "Stoelonderdelen",
+                badge: "-20%",
+                image: "../images/product-foam.jpg",
+                compatibility: "Op maat te snijden",
+                description: "Hoogwaardig stoelschuim voor het opvullen of vervangen van stoelkussens."
+            },
+            {
+                id: 7,
+                name: "Maatwerk Stoelhoes BMW 3-Serie",
+                price: 89.95,
+                oldPrice: null,
+                category: "Stoelhoezen",
+                badge: null,
+                image: "../images/product-hoes-bmw.jpg",
+                compatibility: "E90/E91/E92/E93",
+                description: "Maatwerk stoelhoes speciaal ontworpen voor BMW 3-Serie E90-E93."
+            },
+            {
+                id: 8,
+                name: "Airbag Module Mercedes C-Klasse W204",
+                price: 199.95,
+                oldPrice: null,
+                category: "Airbag Modules",
+                badge: null,
+                image: "../images/product-airbag-mercedes.jpg",
+                compatibility: "W204 / C204 / S204",
+                description: "Originele kwaliteit airbag module voor Mercedes C-Klasse W204."
+            },
+            {
+                id: 9,
+                name: "Stof Reparatieset - 12 Kleuren",
+                price: 19.95,
+                oldPrice: null,
+                category: "Reparatiesets",
+                badge: "Bestseller",
+                image: "../images/product-repair-fabric.jpg",
+                compatibility: "Alle stof types",
+                description: "Complete stof reparatieset met 12 kleuren en reparatiepasta."
+            },
+            {
+                id: 10,
+                name: "Airbag Module Ford Focus MK3",
+                price: 139.95,
+                oldPrice: 159.95,
+                category: "Airbag Modules",
+                badge: "Aanbieding",
+                image: "../images/product-airbag-ford.jpg",
+                compatibility: "Focus MK3 (2011-2018)",
+                description: "Airbag module voor Ford Focus MK3 modellen van 2011 tot 2018."
+            },
+            {
+                id: 11,
+                name: "Lederen Stoelhoes - Premium Zwart",
+                price: 69.95,
+                oldPrice: null,
+                category: "Stoelhoezen",
+                badge: "Nieuw",
+                image: "../images/product-hoes-premium.jpg",
+                compatibility: "Universele pasvorm",
+                description: "Premium lederen stoelhoes met extra padding voor meer comfort."
+            },
+            {
+                id: 12,
+                name: "Airbag Bekleding - Universeel",
+                price: 49.95,
+                oldPrice: null,
+                category: "Airbag Bekleding",
+                badge: null,
+                image: "../images/product-airbag-cover.jpg",
+                compatibility: "Geschikt voor de meeste auto's",
+                description: "Vervangende airbag bekleding in universele pasvorm."
+            },
+            {
+                id: 13,
+                name: "Stoel Verwarming Set",
+                price: 79.95,
+                oldPrice: 99.95,
+                category: "Stoelonderdelen",
+                badge: "-20%",
+                image: "../images/product-heating.jpg",
+                compatibility: "Universeel",
+                description: "Nachrüst set voor stoelverwarming met 2 warmtestanden."
+            },
+            {
+                id: 14,
+                name: "Airbag Module Opel Astra J",
+                price: 129.95,
+                oldPrice: null,
+                category: "Airbag Modules",
+                badge: null,
+                image: "../images/product-airbag-opel.jpg",
+                compatibility: "Astra J (2009-2015)",
+                description: "Airbag module voor Opel Astra J modellen."
+            },
+            {
+                id: 15,
+                name: "Stoel Rails - Universeel",
+                price: 34.95,
+                oldPrice: null,
+                category: "Stoelonderdelen",
+                badge: null,
+                image: "../images/product-rails.jpg",
+                compatibility: "Geschikt voor de meeste auto's",
+                description: "Vervangende stoelrails voor optimale zitpositie."
+            },
+            {
+                id: 16,
+                name: "Airbag Module Peugeot 308",
+                price: 144.95,
+                oldPrice: null,
+                category: "Airbag Modules",
+                badge: null,
+                image: "../images/product-airbag-peugeot.jpg",
+                compatibility: "308 (2007-2013)",
+                description: "Airbag module voor Peugeot 308 eerste generatie."
+            }
+        ];
+
+        // Render Products
+        function renderProducts() {
+            const grid = document.getElementById('productGrid');
+            grid.innerHTML = products.map(product => `
+                <div class="product-card" data-product-id="${product.id}">
+                    ${product.badge ? `<div class="product-badge ${product.badge === 'Nieuw' ? 'badge-new' : ''}">${product.badge}</div>` : ''}
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" onerror="this.src='../images/product-placeholder.jpg'">
+                        <div class="product-overlay">
+                            <button class="btn btn-quickview" onclick="quickView(${product.id})">
+                                <i class="fas fa-eye"></i> Snel bekijken
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">${product.category}</span>
+                        <h3 class="product-title">${product.name}</h3>
+                        <div class="product-meta">
+                            <span class="product-compatibility">
+                                <i class="fas fa-check-circle"></i> ${product.compatibility}
+                            </span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price-current">€${product.price.toFixed(2)}</span>
+                            ${product.oldPrice ? `<span class="price-old">€${product.oldPrice.toFixed(2)}</span>` : ''}
+                        </div>
+                        <button class="btn btn-primary btn-add-cart" onclick="addToCart(${product.id})">
+                            <i class="fas fa-shopping-cart"></i> In winkelwagen
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            renderProducts();
+            
+            // Initialize Shopping Cart
+            window.shoppingCart = new ShoppingCart();
+            
+            // Price range slider
+            const priceRange = document.getElementById('priceRange');
+            const priceValue = document.getElementById('priceValue');
+            if (priceRange && priceValue) {
+                priceRange.addEventListener('input', (e) => {
+                    priceValue.textContent = `€${e.target.value}`;
+                });
+            }
+        });
+    </script>
     <script src="../js/shop.js"></script>
 </body>
 </html>
