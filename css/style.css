@@ -259,6 +259,14 @@ body {
     color: var(--gray-700);
 }
 
+/* Hide nav CTA on small screens */
+@media (max-width: 900px) {
+    .nav-cta {
+        display: none;
+    }
+}
+}
+
 /* Cart Button */
 .cart-btn {
     position: relative;
@@ -1104,6 +1112,21 @@ body {
     padding-left: 2.5rem;
     font-weight: 500;
     font-size: 0.95rem;
+}
+
+.mobile-nav-footer {
+    padding: 1.25rem;
+    border-top: 1px solid var(--gray-200);
+    background: var(--gray-50);
+    position: sticky;
+    bottom: 0;
+}
+
+.mobile-nav-footer .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+    font-size: 1rem;
 }
 
 .mobile-nav-overlay {
