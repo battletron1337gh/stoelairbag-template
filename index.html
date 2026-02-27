@@ -22,13 +22,13 @@
                 </a>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="active">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#">Diensten <i class="fas fa-chevron-down"></i></a>
+                    <li class="has-dropdown">
+                        <a href="#" class="dropdown-toggle">Diensten <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="pages/airbag-reparatie.html">Airbag Reparatie</a></li>
-                            <li><a href="pages/stoelbekleding.html">Stoelbekleding</a></li>
-                            <li><a href="pages/complete-renovatie.html">Complete Renovatie</a></li>
-                            <li><a href="pages/ato-z-service.html">A-tot-Z Service</a></li>
+                            <li><a href="pages/airbag-reparatie.html"><i class="fas fa-airbag"></i> Airbag Reparatie</a></li>
+                            <li><a href="pages/stoelbekleding.html"><i class="fas fa-chair"></i> Stoelbekleding</a></li>
+                            <li><a href="pages/complete-renovatie.html"><i class="fas fa-magic"></i> Complete Renovatie</a></li>
+                            <li><a href="pages/ato-z-service.html"><i class="fas fa-car"></i> A-tot-Z Service</a></li>
                         </ul>
                     </li>
                     <li><a href="pages/webshop.html">Webshop</a></li>
@@ -51,125 +51,250 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg">
-            <div class="hero-overlay"></div>
+    <!-- Mobile Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <a href="index.html" class="logo">
+                <i class="fas fa-airbag logo-icon"></i>
+                <span>StoelAirbag</span>
+            </a>
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-        <div class="container">
-            <div class="hero-content">
-                <h1>Uw autostoel verdient de beste zorg</h1>
-                <p class="hero-tagline">Van airbag tot zitcomfort - alles onder één dak</p>
-                <div class="hero-buttons">
-                    <a href="#offerte" class="btn btn-primary">Direct offerte aanvragen</a>
-                    <a href="#diensten" class="btn btn-secondary">Bekijk onze services</a>
-                </div>
-            </div>
-        </div>
-        <div class="hero-scroll">
-            <i class="fas fa-chevron-down"></i>
-        </div>
-    </section>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+            <li>
+                <button class="mobile-dropdown-toggle" id="mobileDropdownToggle">
+                    Diensten <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="mobile-dropdown-menu" id="mobileDropdownMenu">
+                    <li><a href="pages/airbag-reparatie.html"><i class="fas fa-airbag"></i> Airbag Reparatie</a></li>
+                    <li><a href="pages/stoelbekleding.html"><i class="fas fa-chair"></i> Stoelbekleding</a></li>
+                    <li><a href="pages/complete-renovatie.html"><i class="fas fa-magic"></i> Complete Renovatie</a></li>
+                    <li><a href="pages/ato-z-service.html"><i class="fas fa-car"></i> A-tot-Z Service</a></li>
+                </ul>
+            </li>
+            <li><a href="pages/webshop.html"><i class="fas fa-shopping-cart"></i> Webshop</a></li>
+            <li><a href="pages/over-ons.html"><i class="fas fa-info-circle"></i> Over Ons</a></li>
+            <li><a href="pages/contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+        </ul>
+    </div>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
 
-    <!-- USP Section -->
-    <section class="usp-section">
-        <div class="container">
-            <div class="usp-grid">
-                <div class="usp-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>A-tot-Z service (wij regelen alles)</span>
-                </div>
-                <div class="usp-item">
+    <!-- HERO SECTIE -->
+    <section class="hero-modern">
+        <div class="hero-content-modern">
+            <div class="hero-badge-modern">
+                <i class="fas fa-star"></i> #1 Stoel & Airbag Service in Nederland
+            </div>
+            <h1>Uw autostoel <span class="highlight">verdient de beste zorg</span></h1>
+            <p class="hero-tagline-modern">Van airbag tot zitcomfort - professionele reparaties met garantie. Binnen 24 uur klaar!</p>
+            <div class="hero-buttons-modern">
+                <a href="#contact" class="btn btn-primary btn-large">
+                    <i class="fas fa-calendar-check"></i> Direct offerte aanvragen
+                </a>
+                <a href="#diensten" class="btn btn-secondary btn-large">
+                    <i class="fas fa-tools"></i> Bekijk onze services
+                </a>
+            </div>
+            <div class="hero-trust">
+                <div class="trust-item">
                     <i class="fas fa-shield-alt"></i>
-                    <span>Gespecialiseerd in airbag reparatie</span>
+                    <span>5 jaar garantie</span>
                 </div>
-                <div class="usp-item">
-                    <i class="fas fa-eye-slash"></i>
-                    <span>Onzichtbaar herstel van bekleding</span>
-                </div>
-                <div class="usp-item">
-                    <i class="fas fa-file-invoice"></i>
-                    <span>Gratis vrijblijvende offerte</span>
-                </div>
-                <div class="usp-item">
+                <div class="trust-item">
                     <i class="fas fa-clock"></i>
-                    <span>Snelle service, vaak binnen 24 uur klaar</span>
+                    <span>24 uur service</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fas fa-check-circle"></i>
+                    <span>100% pasgarantie</span>
                 </div>
             </div>
         </div>
+        <a href="#usp" class="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </a>
     </section>
 
-    <!-- Services Section -->
-    <section class="services-section" id="diensten">
+    <!-- USP SECTION -->
+    <section class="usp-section-modern" id="usp">
         <div class="container">
-            <div class="section-header">
-                <h2>Onze diensten</h2>
+            <div class="section-header-modern">
+                <span class="section-tag">Waarom StoelAirbag</span>
+                <h2>Alles onder één dak</h2>
                 <p>Professionele oplossingen voor al uw stoelproblemen</p>
             </div>
-            <div class="services-grid">
-                <a href="pages/airbag-reparatie.html" class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-airbag"></i>
-                    </div>
-                    <h3>Airbag reparatie & montage</h3>
-                    <p>Professionele reparatie van kapotte airbags in autostoelen met garantie op veiligheid.</p>
-                    <span class="service-link">Meer info <i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="pages/stoelbekleding.html" class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chair"></i>
-                    </div>
-                    <h3>Stoelbekleding reparatie</h3>
-                    <p>Deskundig dichtnaaien van scheuren, brandgaten en versleten delen in leder of stof.</p>
-                    <span class="service-link">Meer info <i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="pages/complete-renovatie.html" class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-magic"></i>
-                    </div>
-                    <h3>Volledige stoelrenovatie</h3>
-                    <p>Complete transformatie van uw stoelen met nieuw schuim, bekleding en comfort.</p>
-                    <span class="service-link">Meer info <i class="fas fa-arrow-right"></i></span>
-                </a>
-                <a href="pages/ato-z-service.html" class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <h3>Complete zorg: auto achterlaten</h3>
-                    <p>Breng uw auto, wij demonteren, repareren en monteren alles weer terug. U hoeft niets te doen!</p>
-                    <span class="service-link">Meer info <i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Before/After Section -->
-    <section class="before-after-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Voor & Na</h2>
-                <p>Zie het verschil dat wij maken</p>
-            </div>
-            <div class="before-after-slider">
-                <div class="comparison-container">
-                    <div class="comparison-image before">
-                        <img src="images/before-seat.jpg" alt="Stoel voor reparatie">
-                        <span class="label">Voor</span>
-                    </div>
-                    <div class="comparison-image after">
-                        <img src="images/after-seat.jpg" alt="Stoel na reparatie">
-                        <span class="label">Na</span>
-                    </div>
-                    <div class="slider-handle">
-                        <i class="fas fa-arrows-alt-h"></i>
+            <div class="usp-grid">
+                <div class="usp-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <h3>A-tot-Z service</h3>
+                        <p>Wij regelen alles voor u</p>
                     </div>
                 </div>
-                <p class="slider-hint"><i class="fas fa-hand-pointer"></i> Sleep over de foto om het verschil te zien</p>
+                <div class="usp-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h3>Airbag specialist</h3>
+                        <p>Gespecialiseerd in veiligheid</p>
+                    </div>
+                </div>
+                <div class="usp-card">
+                    <i class="fas fa-eye-slash"></i>
+                    <div>
+                        <h3>Onzichtbaar herstel</h3>
+                        <p>Bekleding zoals nieuw</p>
+                    </div>
+                </div>
+                <div class="usp-card">
+                    <i class="fas fa-file-invoice"></i>
+                    <div>
+                        <h3>Gratis offerte</h3>
+                        <p>Vrijblijvend en snel</p>
+                    </div>
+                </div>
+                <div class="usp-card">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Snelle service</h3>
+                        <p>Vaak binnen 24 uur klaar</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Kentekenchecker Section -->
+    <!-- SERVICES SECTION -->
+    <section class="services-section" id="diensten">
+        <div class="container">
+            <div class="section-header-modern">
+                <span class="section-tag">Onze Diensten</span>
+                <h2>Wat kunnen wij voor u doen?</h2>
+                <p>Van kleine reparatie tot complete renovatie</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-airbag"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Airbag reparatie & montage</h3>
+                        <p>Professionele reparatie van kapotte airbags in autostoelen met garantie op veiligheid.</p>
+                        <a href="pages/airbag-reparatie.html" class="service-link">
+                            Meer info <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Stoelbekleding reparatie</h3>
+                        <p>Deskundig dichtnaaien van scheuren, brandgaten en versleten delen in leder of stof.</p>
+                        <a href="pages/stoelbekleding.html" class="service-link">
+                            Meer info <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Volledige stoelrenovatie</h3>
+                        <p>Complete transformatie van uw stoelen met nieuw schuim, bekleding en comfort.</p>
+                        <a href="pages/complete-renovatie.html" class="service-link">
+                            Meer info <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Complete zorg: auto achterlaten</h3>
+                        <p>Breng uw auto, wij demonteren, repareren en monteren alles weer terug. U hoeft niets te doen!</p>
+                        <a href="pages/ato-z-service.html" class="service-link">
+                            Meer info <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY US SECTION -->
+    <section class="why-us-section">
+        <div class="container">
+            <div class="section-header-modern light">
+                <span class="section-tag">Waarom Wij</span>
+                <h2>StoelAirbag verschil</h2>
+                <p>Wat maakt ons de beste keuze voor uw stoelreparatie</p>
+            </div>
+            <div class="why-us-grid">
+                <div class="why-us-card">
+                    <div class="why-us-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>5 Jaar Garantie</h3>
+                    <p>Op al onze reparaties geven wij 5 jaar garantie. Dat is hoe zeker wij zijn van ons werk.</p>
+                </div>
+                <div class="why-us-card featured">
+                    <div class="why-us-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Snelle Service</h3>
+                    <p>Vaak binnen 24 uur gerepareerd. Geen lange wachttijden, gewoon snel geholpen.</p>
+                </div>
+                <div class="why-us-card">
+                    <div class="why-us-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Persoonlijk Contact</h3>
+                    <p>Direct contact met de specialist. Geen callcenters, maar vakmensen die u helpen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS SECTION -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header-modern">
+                <span class="section-tag">Hoe het werkt</span>
+                <h2>Ons werkwijze</h2>
+                <p>Van contact tot gerepareerd in 4 simpele stappen</p>
+            </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Contact</h3>
+                    <p>Neem contact op via telefoon, WhatsApp of email</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Offerte</h3>
+                    <p>Ontvang een gratis vrijblijvende prijsindicatie</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Reparatie</h3>
+                    <p>Wij repareren uw stoel vakkundig en snel</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Gereed!</h3>
+                    <p>Ophalen of wij leveren terug - zo goed als nieuw!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KENTEKENCHECKER SECTION -->
     <section class="kenteken-section">
         <div class="container">
             <div class="kenteken-content">
@@ -204,7 +329,7 @@
         </div>
     </section>
 
-    <!-- Stoelchecker Quiz Section -->
+    <!-- STOELCHECKER QUIZ SECTION -->
     <section class="quiz-section">
         <div class="container">
             <div class="quiz-container">
@@ -232,10 +357,11 @@
         </div>
     </section>
 
-    <!-- Reviews Section -->
+    <!-- REVIEWS SECTION -->
     <section class="reviews-section">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header-modern">
+                <span class="section-tag">Reviews</span>
                 <h2>Wat onze klanten zeggen</h2>
                 <p>Beoordelingen van tevreden klanten</p>
             </div>
@@ -295,23 +421,42 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section" id="offerte">
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="contact">
         <div class="container">
-            <div class="cta-content">
+            <div class="contact-content">
                 <h2>Klaar voor een frisse stoel?</h2>
                 <p>Neem vandaag nog contact op voor een gratis vrijblijvende offerte</p>
-                <div class="cta-buttons">
-                    <a href="pages/contact.html" class="btn btn-primary btn-large">Neem contact op</a>
-                    <a href="https://wa.me/31612345678" class="btn btn-whatsapp btn-large">
-                        <i class="fab fa-whatsapp"></i> WhatsApp ons
+                <div class="contact-methods">
+                    <a href="tel:+31612345678" class="contact-btn phone">
+                        <i class="fas fa-phone"></i> 06-12345678
                     </a>
+                    <a href="https://wa.me/31612345678" class="contact-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="mailto:info@stoelairbag.nl" class="contact-btn email">
+                        <i class="fas fa-envelope"></i> Email ons
+                    </a>
+                </div>
+                <div class="contact-info-box">
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Ma-Vr: 08:00 - 18:00</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Amsterdam & omgeving</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-shipping-fast"></i>
+                        <span>Ook op locatie mogelijk</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -320,12 +465,7 @@
                         <i class="fas fa-airbag logo-icon"></i>
                         <span>StoelAirbag</span>
                     </a>
-                    <p>Van airbag tot zitcomfort - alles onder één dak. Professionele reparaties met garantie.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
+                    <p>Van airbag tot zitcomfort - alles onder één dak. Professionele reparaties met 5 jaar garantie.</p>
                 </div>
                 <div class="footer-links">
                     <h4>Diensten</h4>
@@ -342,7 +482,6 @@
                         <li><a href="pages/webshop.html">Stoelhoezen</a></li>
                         <li><a href="pages/webshop.html">Airbags & Onderdelen</a></li>
                         <li><a href="pages/webshop.html">Accessoires</a></li>
-                        <li><a href="pages/webshop.html">Onderhoud</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
@@ -357,15 +496,11 @@
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 StoelAirbag. Alle rechten voorbehouden.</p>
-                <div class="footer-legal">
-                    <a href="pages/privacy.html">Privacybeleid</a>
-                    <a href="pages/algemene-voorwaarden.html">Algemene voorwaarden</a>
-                </div>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Float -->
+    <!-- WHATSAPP FLOAT -->
     <a href="https://wa.me/31612345678" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
